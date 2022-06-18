@@ -257,11 +257,7 @@ class FixedRateCalculator:
 
 		return cls(**new_kwargs)
 
-
-	@staticmethod
-	def check_down_payment_and_total()
-
-
+	
 
 	@staticmethod
 	def _check_parameter_validity(**kwargs):
