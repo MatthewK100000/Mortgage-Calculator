@@ -141,7 +141,7 @@ class FixedRateCalculator:
 
 
 	@classmethod
-	def limit_on_interest_payed(cls, loan_size, num_months, limit_on_interest):
+	def limit_on_interest_payed(cls, loan_size, num_months, limit_on_interest, verbose = True):
 		
 		cls._check_parameter_validity(**{'loan_size':loan_size, 'num_months': num_months})
 
@@ -156,14 +156,17 @@ class FixedRateCalculator:
 		monthly_payment /= num_months
 
 		mortgage_instance = cls(loan_size = loan_size, monthly_payment = monthly_payment, num_months = num_months)
-
-		print('For a loan of size: {}, '.format(loan_size))
-		print('and a limit of {} (total payment to lender {}), '.format(limit_on_interest, loan_size + limit_on_interest))
-		print('on a time period of {} months, '.format(num_months))
-		print('amounting to a monthly payment of {}, '.format(monthly_payment))
-		print('...')
-		print('the time to realize that opportunity is when the interest rate reaches {}%'.format(round(100*mortgage_instance.interest_rate,3)))
-
+		
+		if verbose:
+			print('For a loan of size: {}, '.format(loan_size))
+			print('and a limit of {} (total payment to lender {}), '.format(limit_on_interest, loan_size + limit_on_interest))
+			print('on a time period of {} months, '.format(num_months))
+			print('amounting to a monthly payment of {}, '.format(monthly_payment))
+			print('...')
+			print('the time to realize that opportunity is when the interest rate reaches {}%'.format(round(100*mortgage_instance.interest_rate,3)))
+		else:
+			pass
+		
 		return mortgage_instance
 
 
