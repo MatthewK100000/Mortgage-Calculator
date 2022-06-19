@@ -17,7 +17,7 @@ There are four main arguments:
 
 You may provide all four arguments or just three. Any missing argument will be completely determined by the three arguments submitted. Submitting any three arguments, with the last one to be determined, is like framing different questions. See the following examples.
 
-#### Solving For the Monthly Payment
+#### *Solving For the Monthly Payment*
 Let's say you want to take a loan out for $200,000 at an annual interest rate of 3%. How much would you have to pay per month if you want to pay it off by 15 years (180 months)?
 ```python
 mortgage = FixedRateCalculator(loan_size = 200_000, interest_rate = 0.03, num_months = 180)
@@ -25,7 +25,7 @@ print(mortgage.monthly_payment) # prints 1381.1632805560034
 ```
 So you'd have to pay about $1,381.16 per month.
 
-#### Solving For the Size of the Loan
+#### *Solving For the Size of the Loan*
 Now, let's say you are able to pay no more than $1,500 per month for a 30 year loan, with the annual interest rate sitting at 5%. What loan can you afford to take?
 ```python
 mortgage = FixedRateCalculator(monthly_payment = 1_500, num_months = 360, interest_rate = 0.05)
@@ -33,7 +33,7 @@ print(mortgage.loan_size) # prints 279422.4255691129
 ```
 Looks like you the biggest loan you can afford to take is about $279,422. 
 
-#### Solving for the Duration
+#### *Solving for the Duration*
 You have a loan out for $200,000 sitting at an annual interest rate of 1.32%. You want to pay it off as soon as possible, but can't afford to pay more than $1,900 per month. How long will it take for you to pay it off?
 ```python
 mortgage = FixedRateCalculator(loan_size = 200_000, interest_rate = 0.0132, monthly_payment = 1_900)
@@ -41,7 +41,7 @@ print(mortgage.num_months) # prints 111
 ```
 You'll pay it off by 111 months, or 9.25 years. 
 
-#### Solving for the Interest Rate
+#### *Solving for the Interest Rate*
 This one is interesting. Suppose you missed out on the low interest rates. You want to buy a home for $150,000, pay it off by 10 years with a monthly payment at $1,375. When the interest rates start coming down again, at one point must you take that loan out?
 ```python
 mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_payment = 1_375)
