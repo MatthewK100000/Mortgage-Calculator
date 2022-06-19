@@ -82,7 +82,7 @@ mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_pa
 pd.set_option('display.float_format', '{:.2f}'.format)
 mortgage.amortization_schedule(start_month = None, start_year = None).to_html(buf = r"YOURPATH/YOURFILE.html")
 ```
-Produces something like [this]
+Produces something like [this](http://htmlpreview.github.io/?https://github.com/MatthewK100000/Mortgage-Calculator/blob/main/Images/amortization%20schedule.html)
 
 ## Recommended Dependencies
 - Python (3.6.4 or greater)
