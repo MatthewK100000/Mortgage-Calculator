@@ -68,11 +68,21 @@ Again, you must run to the bank when the interest rate reaches 1.547%.
 Of course, you may wish to make the limit even smaller. In which case you'll be fine with paying it faster, because otherwise, the rate will be so small it won't ever happen. Thus, knowledge of how the Fed is moving the funds rate and where you think things are going, coupled with the interest rate that results basically gives you an idea of how realistic your business plan is anytime soon. 
 
 ### Total Payed and Interest Payed
-
+You may also find the total interest payed, in addition with the size of the loan on top, to know how much of a dent that investment will undertake.
+```python
+mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_payment = 1350)
+print(mortgage.total_interest_payed()) # just total interest, prints 12000
+print(mortgage.total_payed_to_lender()) # total total, prints 162000
+```
 
 ### Amortization schedule
-
-
+Lastly, the class is accompanied with a method that produces the amortization schedule, so you may view your mortgage in full detail over its entire duration.
+```python
+mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_payment = 1350)
+pd.set_option('display.float_format', '{:.2f}'.format)
+mortgage.amortization_schedule(start_month = None, start_year = None).to_html(buf = r"YOURPATH/YOURFILE.html")
+```
+Produces something like [this]
 
 ## Recommended Dependencies
 - Python (3.6.4 or greater)
