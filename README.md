@@ -1,5 +1,5 @@
 # Mortgage-Calculator
-A class which provides convenient methods to solve for and visualize fixed rate mortgage inquiries
+A class which provides convenient methods to plan for and answer fixed rate mortgage inquiries.
 
 ## Usage
 ### Header
