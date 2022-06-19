@@ -5,7 +5,6 @@ from scipy.special import comb
 from math import log
 from datetime import date
 from dateutil.relativedelta import relativedelta
-import matplotlib.pyplot as plt 
 import warnings
 
 
