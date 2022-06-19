@@ -65,7 +65,7 @@ print(round(100*mortgage.interest_rate, 3),'%') # prints 1.547%
 ```
 Again, you must run to the bank when the interest rate reaches 1.547%. 
 
-Of course, you may wish to make the limit even smaller. In which case you'll be fine with paying it faster, because otherwise, the rate will be so small it won't ever happen. Thus, knowledge of how the Fed is moving the funds rate and where you think things are going, coupled with the interest rate that results basically gives you an idea of how realistic your business plan is. 
+Of course, you may wish to make the limit even smaller. In which case you'll be fine with paying it faster, because otherwise, the rate will be so small it won't ever happen. Thus, knowledge of how the Fed is moving the funds rate and where you think things are going, coupled with the interest rate that results basically gives you an idea of how realistic your business plan is anytime soon. 
 
 ### Total Payed and Interest Payed
 
