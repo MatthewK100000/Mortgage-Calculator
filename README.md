@@ -52,8 +52,20 @@ So you must run to the bank when the annual interest rate reaches 1.92%.
 The above examples ignore the possibility of lower rates and refinancing, but at least give you a picture of the kind of parameters you can operate in and plan accordingly.
 
 ### From Limit on Interest
+You may find the interest rate by passing ``loan_size``, ``num_months``, and ``monthly_payment``, but you may find it easier to set a cap on the amount of interest payed to the bank and start from there. This may be useful for investing purposes, for example, if you wish to eventually cash out on a property, but want to ensure the interest does not eat away at your profit.
 
-alternative constructor investor standpoint
+There is an alternative constructor you may use instead in that case. Say you want to pay the bank no more than $12,000 on interest for a $150,000 loan with a duration of 10 years. Then, 
+```python
+mortgage = FixedRateCalculator.limit_on_interest_payed(limit_on_interest = 12_000, loan_size = 150_000, num_months = 120, verbose = False)
+print(mortgage.monthly_payment) # prints 1350
+```
+So you must pay $1,350 per month in that case. This is a straightforward calculation. What about the annual interest rate?
+```python
+print(round(100*mortgage.interest_rate, 3),'%') # prints 1.547%
+```
+Again, you must run to the bank when the interest rate reaches 1.547%. 
+
+Of course, you may wish to make the limit even smaller. In which case you'll be fine with paying it faster, because otherwise, the rate will be so small it won't ever happen. Thus, knowledge of how the Fed is moving the funds rate and where you think things are going, coupled with the interest rate that results basically gives you an idea of how realistic your business plan is. 
 
 ### Total Payed and Interest Payed
 
