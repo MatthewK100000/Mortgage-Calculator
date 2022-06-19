@@ -12,7 +12,7 @@ There are four main arguments:
 - ``loan_size``: Size of the loan.
 - ``num_months``: Duration of the mortgage in months.
 - ``interest_rate``: The annual interest rate, not the APR. Between 0 and 1.
-- ``monthly_payment``: The monthly payment
+- ``monthly_payment``: The monthly payment.
 
 
 You may provide all four arguments or just three. Any missing argument will be completely determined by the three arguments submitted. Submitting any three arguments, with the last one to be determined, is like framing different questions. See the following examples.
@@ -82,7 +82,7 @@ mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_pa
 pd.set_option('display.float_format', '{:.2f}'.format)
 mortgage.amortization_schedule(start_month = None, start_year = None).to_html(buf = r"YOURPATH/YOURFILE.html")
 ```
-Produces something like [this](http://htmlpreview.github.io/?https://github.com/MatthewK100000/Mortgage-Calculator/blob/main/Images/amortization%20schedule.html)
+Produces something like [this](http://htmlpreview.github.io/?https://github.com/MatthewK100000/Mortgage-Calculator/blob/main/Images/amortization%20schedule.html).
 
 ## Recommended Dependencies
 - Python (3.6.4 or greater)
