@@ -2,7 +2,8 @@
 A class which provides convenient methods to solve for and visualize fixed rate mortgage inquiries
 
 ## Usage
-
+#### Header
+hfhrbf
 ## Recommended Dependencies
 - Python (3.6.4 or greater)
   - [warnings](https://docs.python.org/3.6/library/warnings.html), [math](https://docs.python.org/3.6/library/math.html), [datetime](https://docs.python.org/3.6/library/datetime.html?highlight=datetime#module-datetime)
