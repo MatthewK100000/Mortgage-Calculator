@@ -173,7 +173,7 @@ class FixedRateCalculator:
 	@classmethod
 	def down_payment_from_limit_on_interest(cls, num_months, interest_rate, cost, limit_on_interest, verbose = True):
 
-		cls._check_parameter_validity(**{'interest_rate':loan_size, 'num_months': num_months})
+		cls._check_parameter_validity(**{'interest_rate':interest_rate, 'num_months': num_months})
 
 		if (not isinstance(limit_on_interest,int)) and (not isinstance(limit_on_interest,float)):
 			raise Exception("Parameter `limit_on_interest` must be int/float and above zero.")
