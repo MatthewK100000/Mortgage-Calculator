@@ -170,6 +170,28 @@ class FixedRateCalculator:
 		return mortgage_instance
 
 
+	@classmethod
+	def down_payment_from_limit_on_interest(cls, num_months, interest_rate, cost, limit_on_interest, verbose = True):
+
+		cls._check_parameter_validity(**{'interest_rate':interest_rate, 'num_months': num_months})
+
+		if (not isinstance(limit_on_interest,int)) and (not isinstance(limit_on_interest,float)):
+			raise Exception("Parameter `limit_on_interest` must be int/float and above zero.")
+		else:
+			if limit_on_interest < 0:
+				raise Exception("Parameter `limit_on_interest` must be int/float and above zero.")
+
+		if (not isinstance(cost,int)) and (not isinstance(cost, float)):
+			raise Exception("Parameter `cost` must be int/float and above zero.")
+		else:
+			if cost < 0:
+				raise Exception("Parameter `cost` must be int/float and above zero.")
+
+
+		down_payment = cost - limit_on_interest*((1 + interest_rate/12)**num_months - 1)/((num_months*interest_rate/12 - 1)*(1 + interest_rate/12)**num_months + 1)
+		return down_payment
+
+
 
 	def _solve_for_monthly_payment(self):
 		return (self.loan_size*(self.interest_rate/12)*(1 + self.interest_rate/12)**self.num_months) / ((1 + self.interest_rate/12)**self.num_months - 1)
