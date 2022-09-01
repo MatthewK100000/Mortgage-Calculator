@@ -67,6 +67,19 @@ Again, you must run to the bank when the interest rate reaches 1.547%.
 
 Of course, you may wish to make the limit even smaller. In which case you'll be fine with paying it faster, because otherwise, the rate will be so small it won't ever happen. Thus, knowledge of how the Fed is moving the funds rate and where you think things are going, coupled with the interest rate that results basically gives you an idea of how realistic your business plan is anytime soon. 
 
+### Down Payment From Limit on Interest
+You may also wish to know how large of a down payment will be required to cap the amount of interest accumulated after the loan has been payed off. Maybe you are hesitant to put down a larger amount and want to see how much you'll save first. 
+
+Here's how you would do that, reusing the above example. `Cost` is total cost of whatever you'd like to purchase and is the sum of the down payment and the `loan_size`. If we put 170,000, we expect this function to return 20,000, and it does:
+
+```python
+mortgage = FixedRateCalculator.limit_on_interest_payed(limit_on_interest = 12_000, loan_size = 150_000, num_months = 120, verbose = False)
+exact_interest_rate_from_above = mortgage.interest_rate # exactly it is 0.015472508402345372
+
+down_payment = FixedRateCalculator.down_payment_from_limit_on_interest(cost = 170_000, limit_on_interest = 12_000, num_months = 120, interest_rate = exact_interest_rate_from_above) 
+print(down_payment) # returns 19999.9999999... close to 20,000.
+```
+
 ### Total Payed and Interest Payed
 You may also find the total interest payed, in addition with the size of the loan on top, to know how much of a dent that investment will undertake.
 ```python
