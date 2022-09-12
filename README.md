@@ -95,7 +95,7 @@ mortgage = FixedRateCalculator(loan_size = 150_000, num_months = 120, monthly_pa
 pd.set_option('display.float_format', '{:.2f}'.format)
 mortgage.amortization_schedule(start_month = None, start_year = None).to_html(buf = r"YOURPATH/YOURFILE.html")
 ```
-Produces something like [this](http://htmlpreview.github.io/?https://github.com/MatthewK100000/Mortgage-Calculator/blob/main/Images/amortization%20schedule.html).
+Produces something like [this](http://htmlpreview.github.io/?https://github.com/MatthewK100000/Mortgage-Calculator/blob/master/Images/amortization%20schedule.html).
 
 ## Recommended Dependencies
 - Python (3.6.4 or greater)
@@ -106,4 +106,4 @@ Produces something like [this](http://htmlpreview.github.io/?https://github.com/
 - [Dateutil](https://dateutil.readthedocs.io/en/stable/) (version 2.7.3 or greater)
 
 ## Underlying Math
-Since github markdown does not currently support latex formulas, you may view the mathematical appendix [here](https://github.com/MatthewK100000/Mortgage-Calculator/blob/main/Math/mathematical%20background%20v1.0.pdf).
+Since github markdown does not currently support latex formulas, you may view the mathematical appendix [here](https://github.com/MatthewK100000/Mortgage-Calculator/blob/master/Math/mathematical%20background%20v1.0.pdf).
