@@ -106,4 +106,4 @@ Produces something like [this](http://htmlpreview.github.io/?https://github.com/
 - [Dateutil](https://dateutil.readthedocs.io/en/stable/) (version 2.7.3 or greater)
 
 ## Underlying Math
-Since github markdown does not currently support latex formulas, you may view the mathematical appendix [here](https://github.com/MatthewK100000/Mortgage-Calculator/blob/master/Math/mathematical%20background%20v1.0.pdf).
+Since github markdown does not currently support latex formulas, you may view the mathematical appendix [here](https://github.com/MatthewK100000/Mortgage-Calculator/blob/master/Math/mathematical%20background%20v1.1.pdf).

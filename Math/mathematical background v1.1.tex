@@ -87,4 +87,27 @@ $$I_k = L_{k-1}r = L_0 r(1+r)^{k-1} - M\frac{(1+r)^{k-1} - 1}{1} = (L_0 r - M)(1
 The principal for month $k$ is whatever is left over from $M$:
 $$P_k = M - I_k = (M - L_0 r)(1+r)^{k-1}$$
 Using these equations, we can develop the amortization schedule, which is a table that details the payments per month over the entire course of the mortgage. 
+
+\section*{\texttt{Down Payment from Limit on Interest}}
+Using the above equations, we can also derive the down payment required to result in a set amount of total interest accumulated over the course of the loan.
+
+This can be useful in determining how much you'll save on interest given a larger down payment, and see if you think if putting down a larger amount can fit your budget.
+
+Rearranging the monthly payment formula, we obtain an expression for the size of the loan, $L_0$:
+$$\frac{M[(1+r)^n - 1]}{r(1+r)^n} = L_0$$
+The down payment $D$ is the total cost of whatever the loan is out for, $C$, minus the size of the loan, $L_0$:
+$$D = C - L_0 = C - M\frac{(1+r)^n - 1}{r(1+r)^n}$$
+We can also obtain an expression for $M$ in terms of the total interest accumulated (a given), $I$, the monthly interest rate $r$, and the duration of the loan in months $n$. By the end of the mortgage, all the money went towards the loan $L_0$ and total interest $I$:
+$$L_0 + I  = M\cdot n$$
+Plugging in the expression for $L_0$:
+$$\frac{M[(1+r)^n - 1]}{r(1+r)^n}  + I  = M\cdot n$$
+$$M[(1+r)^n - 1 - nr(1+r)^n] + Ir(1+r)^n = 0$$
+$$M = \frac{Ir(1+r)^n}{(nr-1)(1+r)^n + 1}$$
+$M$ is just an auxiliary variable. Plugging it into the formula for $D$, we can solve for $D$ given $I$, $n$, $r$, and $C$:
+\begin{empheq}[box=\mybluebox]{align*}
+D = C - I\frac{(1+r)^n - 1}{(nr - 1)(1 + r)^n + 1}
+\end{empheq}
+
+
+
 \end{document}
